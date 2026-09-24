@@ -1,0 +1,60 @@
+<h1>Bài 18 - Json Array Model – Group Customers</h1>
+
+<table border="1" width="100%" cellpadding="8" cellspacing="0">
+
+  <tr>
+    <th>Customer Type ID</th>
+    <th>Customer Type Name</th>
+    <th>Customers</th>
+  </tr>
+
+  <tbody *ngFor="let group of customerGroups">
+
+    <!-- Thông tin nhóm khách hàng -->
+    <tr>
+      <td>{{ group.CustomerTypeId }}</td>
+      <td>{{ group.CustomterTypeName }}</td>
+
+      <td>
+        <!-- Danh sách khách hàng trong nhóm -->
+        <table border="1" width="100%" cellpadding="5" cellspacing="0">
+
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Image</th>
+          </tr>
+
+          <tbody *ngFor="let c of group.Customers">
+
+            <tr>
+              <td>{{ c.Id }}</td>
+
+              <td>{{ c.Name }}</td>
+
+              <td>{{ c.Email }}</td>
+
+              <td>{{ c.Age }}</td>
+
+              <td>
+                <img
+                  [src]="c.Image"
+                  width="80"
+                  height="80"
+                  alt="{{ c.Name }}"
+                >
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>

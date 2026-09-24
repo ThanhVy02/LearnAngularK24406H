@@ -1,0 +1,33 @@
+<p>binding-event-component works!</p>
+<table border="1">
+  <tr>
+    <td colspan="2">Phương trình bậc 1</td>
+  </tr>
+
+  <tr>
+    <td>Hệ số a: </td>
+    <td>
+      <input type="number" [value]="hsa" #view_a />
+    </td>
+  </tr>
+
+  <tr>
+    <td>Hệ số b: </td>
+    <td>
+      <input type="number" [value]="hsb" #view_b />
+    </td>
+  </tr>
+
+  <tr>
+    <td>Kết quả:</td>
+    <td>{{ result }}</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <button (click)="giaiPtb1(view_a.value, view_b.value)">Giải</button>
+
+      <button>PT Mới</button>
+    </td>
+  </tr>
+</table>

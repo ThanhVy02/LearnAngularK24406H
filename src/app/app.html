@@ -1,0 +1,17 @@
+<h1>second contact</h1>
+<app-homework></app-homework>
+<app-product-list-component></app-product-list-component>
+
+<app-child-component
+  [receivedData]="'Hello from Parent A'"
+  (notifyParent)="handleMessage($event)">
+</app-child-component>
+
+<div *ngIf="messageFromChild">
+  <p>Data from child component: {{ messageFromChild | json }}</p>
+</div>
+
+<!-- <app-binding-property-component></app-binding-property-component>
+<app-binding-class-component></app-binding-class-component>
+<app-binding-style-component></app-binding-style-component> -->
+<router-outlet></router-outlet>

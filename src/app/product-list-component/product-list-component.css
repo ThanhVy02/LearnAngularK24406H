@@ -1,0 +1,19 @@
+.red-row {
+  background-color: #ffe5e5;
+  color: red;
+}
+
+.red-price {
+  color: red;
+  font-weight: bold;
+}
+
+.green-row {
+  background-color: #e8ffe8;
+  color: green;
+}
+
+.green-price {
+  color: green;
+  font-weight: bold;
+}
